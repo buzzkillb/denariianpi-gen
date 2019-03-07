@@ -4,18 +4,19 @@ on_chroot << EOF
   wget https://www.openssl.org/source/openssl-1.0.1j.tar.gz
   tar -xzvf openssl-1.0.1j.tar.gz
   cd openssl-1.0.1j
-  ./config --openssldir=/usr/local/openssl1.0.1j shared
+  ./config
+  make depend
   make
-# make test
+#  make test
   make install
-  ln -s /usr/local/openssl1.0.1j /usr/local/openssl
+  sudo ln -sf /usr/local/ssl/bin/openssl `which openssl`
 
   git clone https://github.com/carsenk/denarius
   cd denarius
   git checkout v3.4
   git pull
   cd src
-  OPENSSL_INCLUDE_PATH=/usr/local/openssl/include OPENSSL_LIB_PATH=/usr/local/openssl/lib make -f makefile.arm
+  OPENSSL_INCLUDE_PATH=/usr/local/ssl/include OPENSSL_LIB_PATH=/usr/local/ssl/lib make -f makefile.arm
   strip denariusd
   cp denariusd /usr/local/bin/denariusd
 EOF
