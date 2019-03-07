@@ -1,0 +1,3 @@
+git unzip
+libdb++-dev libboost-all-dev libqrencode-dev libminiupnpc-dev libevent-dev
+autogen automake libtool
