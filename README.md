@@ -25,6 +25,7 @@ package is `<tool>[:<debian-package>]`.
 | ------------- |:-------------:| -----:| -----:|
 | denariian-lite      | denariusd | v3.3.8 | v3.4 |
 
+https://denariustalk.org/index.php?/topic/250-how-to-build-custom-raspbian-image-denarius-pi-denariian/
 ## Build Denariian  
 
 To build **denariian-lite** - denariusd (command line only)  
