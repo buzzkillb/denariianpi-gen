@@ -1,6 +1,7 @@
-# pi-gen
+![denariianpi](https://i.imgur.com/gWKri5r.jpg)
+# denariian pi-gen
 
-_Tool used to create the raspberrypi.org Raspbian images_
+_Tool used to create denariian pi image, forked from official pi-gen the raspberrypi.org Raspbian images_
 
 
 ## Dependencies
@@ -20,7 +21,20 @@ dosfstools bsdtar libcap2-bin grep rsync xz-utils file git curl
 The file `depends` contains a list of tools needed.  The format of this
 package is `<tool>[:<debian-package>]`.
 
+| Image        | Wallet           | Version  | Branch  |
+| ------------- |:-------------:| -----:| -----:|
+| denariian-lite      | denariusd | v3.3.8 | v3.4 |
 
+## Build Denariian  
+
+To build **denariian-lite** - denariusd (command line only)  
+```
+# Example for building denariian lite system
+echo "IMG_NAME='denariian-lite'" > config
+touch ./stage3/SKIP ./stage4/SKIP ./stage5/SKIP
+touch ./stage4/SKIP_IMAGES ./stage5/SKIP_IMAGES
+sudo ./build.sh
+```
 ## Config
 
 Upon execution, `build.sh` will source the file `config` in the current
