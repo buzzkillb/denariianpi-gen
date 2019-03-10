@@ -15,6 +15,9 @@ on_chroot << EOF
   cd denarius
   git checkout v3.4
   git pull
+  qmake "USE_NATIVETOR=-" "USE_UPNP=1" "USE_QRCODE=1" OPENSSL_INCLUDE_PATH=/usr/local/ssl/include OPENSSL_LIB_PATH=/usr/local/ssl/lib denarius-qt.pro
+  make
+  cp Denarius /usr/local/bin/Denarius
   cd src
   OPENSSL_INCLUDE_PATH=/usr/local/ssl/include OPENSSL_LIB_PATH=/usr/local/ssl/lib make -f makefile.arm
   strip denariusd
