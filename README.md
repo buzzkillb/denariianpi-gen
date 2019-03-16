@@ -35,10 +35,12 @@ clone
 ```
 git clone https://github.com/buzzkillb/denariianpi-gen
 ```
-after cloning, make the denarius compile bash file executable
+after cloning, make the denarius compile bash file(s) executable
 ```
 cd ~/denariianpi-gen/stage2/04-denariusd
 chmod +x 04-run.sh
+cd ~/denariianpi-gen/stage4/04-denarius
+chmod +x 00-run.sh
 ```
 Go back to cloned folder
 ```
