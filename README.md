@@ -23,17 +23,37 @@ package is `<tool>[:<debian-package>]`.
 
 | Image        | Wallet           | Version  | Branch  |
 | ------------- |:-------------:| -----:| -----:|
-| denariian-lite      | denariusd | v3.3.8 | v3.4 |
+| denariian-lite      | denariusd & Denarius QT | v3.3.8.4 | v3.4 |
+| denariian      | denariusd & Denarius QT | v3.3.8.4 | v3.4 |
 
 https://denariustalk.org/index.php?/topic/250-how-to-build-custom-raspbian-image-denarius-pi-denariian/
 ## Build Denariian  
-
-To build **denariian-lite** - denariusd (command line only)  
+clone
+```
+git clone https://github.com/buzzkillb/denariianpi-gen
+```
+after cloning, make the denarius compile bash file executable
+```
+cd ~/denariianpi-gen/stage2/04-denariusd
+chmod +x 04-run.sh
+```
+Go back to cloned folder
+```
+cd ~/denariianpi-gen
+```
+To build **denariian-lite** - denariusd daemon & QT (command line only)  
 ```
 # Example for building denariian lite system
 echo "IMG_NAME='denariian'" > config
 touch ./stage3/SKIP ./stage4/SKIP ./stage5/SKIP
 touch ./stage4/SKIP_IMAGES ./stage5/SKIP_IMAGES
+sudo ./build.sh
+```
+To build **denariian-lite** + **denariian** - denariusd daemon & QT (Full Deskstop)  
+```
+# Example for building denariian lite + full desktop system
+echo "IMG_NAME='denariian'" > config
+touch ./stage5/SKIP
 sudo ./build.sh
 ```
 ## Config
