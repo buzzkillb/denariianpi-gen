@@ -3,6 +3,9 @@
 
 _Tool used to create denariian pi image, forked from official pi-gen the raspberrypi.org Raspbian images_
 
+Wallets located under /usr/local/bin  
+Denarius - QT  
+denariusd - daemon  
 
 ## Dependencies
 
