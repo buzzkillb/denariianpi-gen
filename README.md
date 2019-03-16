@@ -61,7 +61,7 @@ echo "IMG_NAME='denariian'" > config
 touch ./stage5/SKIP
 sudo ./build.sh
 ```
-##VNC Setup (No Monitor Required)
+## VNC Setup (No Monitor Required)
 ```
 sudo raspi-config
 interfacing options -> VNC -> Enable
@@ -70,7 +70,7 @@ From command line
 ```
 vncserver
 ```
-Connect with VNC Viewer using hostname or IP example ie, raspberrypi:1 or 192.168.1.111:1  
+Connect with VNC Viewer using hostname or IP example ie, denariianos:1 or 192.168.1.111:1  
 ## Config
 
 Upon execution, `build.sh` will source the file `config` in the current
