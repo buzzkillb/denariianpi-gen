@@ -13,7 +13,7 @@ on_chroot << EOF
 
   git clone https://github.com/carsenk/denarius
   cd denarius
-  git checkout v3.4
+  git checkout master
   git pull
   qmake "USE_NATIVETOR=-" "USE_UPNP=1" "USE_QRCODE=1" OPENSSL_INCLUDE_PATH=/usr/local/ssl/include OPENSSL_LIB_PATH=/usr/local/ssl/lib denarius-qt.pro
   make
