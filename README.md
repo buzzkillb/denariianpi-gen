@@ -26,8 +26,8 @@ package is `<tool>[:<debian-package>]`.
 
 | Image        | Wallet           | Version  | Branch  |
 | ------------- |:-------------:| -----:| -----:|
-| denariian-lite      | denariusd & Denarius QT | v3.3.8.5 | master |
-| denariian      | denariusd & Denarius QT | v3.3.8.5 | master |
+| denariian-lite      | denariusd & Denarius QT | v3.3.9.1 | master |
+| denariian      | denariusd & Denarius QT | v3.3.9.1 | master |
 
 https://denariustalk.org/index.php?/topic/250-how-to-build-custom-raspbian-image-denarius-pi-denariian/
 ## Build Denariian  
